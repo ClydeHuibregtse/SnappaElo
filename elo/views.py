@@ -102,8 +102,11 @@ def player_view(request, player_name):
                     else:
                         loss_dict[opp_player] += 1
 
-    nemesis = max(loss_dict, key=loss_dict.get)
-    bitch = max(wins_dict, key=wins_dict.get)
+
+    if len(loss_dict) != 0:
+        nemesis = max(loss_dict, key=loss_dict.get)
+    if len(wins_dict) != 0:
+        bitch = max(wins_dict, key=wins_dict.get)
 
 
     context = {'player': player, 'datax': datax, 'datay': datay, 'nemesis':nemesis, 'bitch':bitch}
