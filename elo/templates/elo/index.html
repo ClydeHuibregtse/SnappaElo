@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Theta Tau Snappa Elo Ranking</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'elo/Elo.css' %}">
+  </head>
+  <body>
+    <div id="CenterContent">
+      <h1>Theta Tau Snappa Elo</h1>
+    </div>
+
+    <div id="LeaderBoard">
+      <h1>Leader Board</h1>
+      <table>
+        <tbody>
+          <tr>
+          	<th>Name</th>
+          	<th>Rating</th>
+          </tr>
+          {% if all_players %}
+            {% for player in all_players %}
+              <tr>
+                <td> <a href="{% url 'ind_player' player.name %}">{{player.name}}</a> </td>
+                <td> {{player.rating}} </td>
+              </tr>
+            {% endfor %}
+          {% else %}
+              <p>No players are available.</p>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+
+    <div id="GameEntry">
+      <h1>New Games</h1>
+
+      <form method="post" class=GameForm>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+
+  </body>
+</html>

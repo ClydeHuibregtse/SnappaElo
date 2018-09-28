@@ -1,0 +1,80 @@
+
+body {
+  background-image: url("thetatau.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 300px 420px;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+@import "lesshat";
+
+
+#CenterContent h1 {
+  text-align: center;
+  font-size: 30pt;
+}
+
+#LeaderBoard h1 {
+  text-align: center;
+
+}
+
+#LeaderBoard {
+  position: absolute;
+}
+
+#SignInDiv {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: 5px;
+
+}
+
+#GameEntry {
+
+  position: absolute;
+  right: 5px;
+
+}
+
+#GameEntry form {
+  align-items: center;
+}
+
+.GameForm input {
+  align-items: center;
+}
+
+table{
+  color: black;
+  border-spacing: 0;
+}
+
+tr:first-child{
+  background-color: #B13015;
+}
+
+
+tr{
+  background-color: #CEC2C0 ;
+}
+
+th, td{
+  margin: 0;
+  padding: .5em 1.5em;
+  text-align: center;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+th{
+  border-bottom-width: 2px;
+}

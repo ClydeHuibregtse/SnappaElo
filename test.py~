@@ -1,0 +1,7 @@
+from elo.models import Player, Game
+
+players = [Player(name="Clyde"), Player(name="Gabe"), Player(name="Johnny"), Player(name="JX")]
+
+game1 = Game(score="7-5")
+
+game1.players.set(players)

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Theta Tau Snappa Elo Ranking</title>
+  	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+
+    {% load static %}
+    <script type="text/javascript" src="{% static 'elo/plotter.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'elo/Elo.css' %}"></link>
+
+
+  </head>
+  <body>
+    <h1> {{player.name}} </h1>
+    <p>Current Rating: {{player.rating}}</p>
+    <div id="ratingsPlot"></div>
+    <script>plotter({{datax|safe}}, {{datay|safe}}, "ratingsPlot")</script>
+
+
+    <p>Nemesis: {{ nemesis }}</p>
+    <p>Bitch: {{ bitch }}</p>
+    <a href="{% url 'index' %}">Click here to return to the main page</a>
+
+  </body>
+</html>

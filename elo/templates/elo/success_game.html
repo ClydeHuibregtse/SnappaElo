@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Theta Tau Snappa Elo Ranking</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'elo/Elo.css' %}">
+  </head>
+  <body>
+    <h1>Thank you for submitting your game!</h1>
+    <br>
+
+    {{ game }}
+    <br>
+    <br>
+    <a href="{% url 'index' %}">Click here to return to the main page</a>
+
+  </body>
+</html>
